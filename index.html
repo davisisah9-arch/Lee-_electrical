@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lee Electrical | Professional Electrical Services</title>
+
+  <meta name="description" content="Lee Electrical provides professional electrical installation, wiring, repairs, lighting and maintenance services. Contact Davis Isah on 0720515135.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f7f7f7;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 18px 7%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #ffc107;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 18px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #ffc107;
+    }
+
+    .hero {
+      min-height: 90vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
+        linear-gradient(135deg, #222, #555);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 10vw, 75px);
+      color: #ffc107;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: clamp(22px, 5vw, 38px);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #eee;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #ffc107;
+      color: #111;
+    }
+
+    .btn-primary:hover {
+      background: #ffda55;
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5d;
+      transform: translateY(-2px);
+    }
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      font-size: 35px;
+      color: #111;
+    }
+
+    .section-title span {
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #ffc107;
+      margin: 10px auto;
+    }
+
+    .about {
+      background: white;
+    }
+
+    .about-content {
+      max-width: 850px;
+      margin: auto;
+      text-align: center;
+      font-size: 17px;
+    }
+
+    .services {
+      background: #f1f1f1;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-icon {
+      font-size: 45px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      margin-bottom: 10px;
+      color: #111;
+    }
+
+    .service-card p {
+      color: #666;
+    }
+
+    .why {
+      background: #111;
+      color: white;
+    }
+
+    .why .section-title h2 {
+      color: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .why-card {
+      text-align: center;
+      padding: 25px;
+    }
+
+    .why-card h3 {
+      color: #ffc107;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      background: white;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+      background: #f5f5f5;
+      padding: 35px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .contact-item {
+      margin: 18px 0;
+      font-size: 18px;
+    }
+
+    .contact-item a {
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-item a:hover {
+      color: #d99f00;
+    }
+
+    footer {
+      background: #080808;
+      color: white;
+      text-align: center;
+      padding: 25px 15px;
+    }
+
+    footer strong {
+      color: #ffc107;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #25D366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      font-size: 28px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      z-index: 999;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 15px 5%;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 12px;
+      }
+
+      section {
+        padding: 55px 5%;
+      }
+
+      .hero {
+        min-height: 85vh;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .contact-box {
+        padding: 25px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">⚡ LEE ELECTRICAL</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>LEE ELECTRICAL</h1>
+
+      <h2>Professional Electrical Services</h2>
+
+      <p>
+        Reliable electrical installation, wiring, repairs,
+        lighting and maintenance services.
+      </p>
+
+      <div class="buttons">
+
+        <a class="btn btn-primary" href="tel:0720515135">
+          📞 Call Now
+        </a>
+
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/254720515135?text=Hello%20Lee%20Electrical%2C%20I%20would%20like%20to%20enquire%20about%20your%20electrical%20services."
+           target="_blank">
+          💬 WhatsApp Us
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+
+    <div class="section-title">
+      <h2>About Lee Electrical</h2>
+      <span></span>
+    </div>
+
+    <div class="about-content">
+
+      <p>
+        Welcome to <strong>Lee Electrical</strong>.
+        We provide dependable electrical services for homes,
+        businesses and other properties.
+      </p>
+
+      <br>
+
+      <p>
+        Whether you need new electrical installation,
+        troubleshooting, repairs, lighting installation or
+        maintenance, contact us to discuss your electrical needs.
+      </p>
+
+      <br>
+
+      <p>
+        <strong>Contact: Davis Isah</strong>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+
+    <div class="section-title">
+      <h2>Our Services</h2>
+      <span></span>
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Electrical Installation</h3>
+        <p>
+          Electrical installation services for homes,
+          offices and other properties.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔌</div>
+        <h3>Wiring & Rewiring</h3>
+        <p>
+          Wiring and rewiring services for electrical systems
+          and renovations.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">💡</div>
+        <h3>Lighting Installation</h3>
+        <p>
+          Indoor and outdoor lighting installation
+          and improvements.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔧</div>
+        <h3>Electrical Repairs</h3>
+        <p>
+          Troubleshooting and repair of electrical faults
+          and problems.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏠</div>
+        <h3>Home Electrical Services</h3>
+        <p>
+          Electrical services for residential properties
+          and homes.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🏢</div>
+        <h3>Commercial Services</h3>
+        <p>
+          Electrical installation and maintenance
+          for business premises.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔍</div>
+        <h3>Fault Finding</h3>
+        <p>
+          Identification and troubleshooting of
+          electrical faults.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3>Electrical Maintenance</h3>
+        <p>
+          Electrical maintenance services to help
+          keep systems working properly.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WHY CHOOSE US -->
+  <section class="why">
+
+    <div class="section-title">
+      <h2>Why Contact Lee Electrical?</h2>
+      <span></span>
+    </div>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <h3>Reliable Service</h3>
+        <p>We focus on dependable electrical work.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Professional</h3>
+        <p>Electrical services handled with care and attention.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Customer Focused</h3>
+        <p>We listen to your electrical needs and requirements.</p>
+      </div>
+
+      <div class="why-card">
+        <h3>Easy to Contact</h3>
+        <p>Call or WhatsApp us for enquiries and bookings.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+
+    <div class="section-title">
+      <h2>Contact Us</h2>
+      <span></span>
+    </div>
+
+    <div class="contact-box">
+
+      <div class="contact-item">
+        👨‍🔧 <strong>Contact Person:</strong><br>
+        Davis Isah
+      </div>
+
+      <div class="contact-item">
+        📞 <strong>Phone:</strong><br>
+        <a href="tel:0720515135">
+          0720 515 135
+        </a>
+      </div>
+
+      <div class="contact-item">
+        ✉️ <strong>Email:</strong><br>
+        <a href="mailto:davisisah9@gmail.com">
+          davisisah9@gmail.com
+        </a>
+      </div>
+
+      <div class="buttons">
+
+        <a class="btn btn-primary"
+           href="tel:0720515135">
+          📞 Call Davis
+        </a>
+
+        <a class="btn btn-whatsapp"
+           href="https://wa.me/254720515135?text=Hello%20Davis%2C%20I%20found%20Lee%20Electrical%20online%20and%20I%20need%20electrical%20services."
+           target="_blank">
+          💬 WhatsApp
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 <strong>Lee Electrical</strong>.
+      All rights reserved.
+    </p>
+
+    <p>
+      Professional Electrical Services
+    </p>
+
+  </footer>
+
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/254720515135?text=Hello%20Lee%20Electrical%2C%20I%20need%20electrical%20services."
+    target="_blank"
+    aria-label="Chat with Lee Electrical on WhatsApp">
+    💬
+  </a>
+
+</body>
+      </html># Lee-_electrical
